@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "b6fca1d8-c76f-40e1-9d4c-3f26629cca0e",
+		"name": "Sanbercode Golang - Cakrayudha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21091140"
+	},
+	"item": [
+		{
+			"name": "Quiz 3 Sanbercode Golang",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/users/login",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignUp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password\",\r\n    \"re_type_password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/users/signup",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "GetAllBooks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/books",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/books/1",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"books",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateBooks",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Timun Jelita\",\r\n  \"description\": \"Buku Timun Jelita.\",\r\n  \"image_url\": \"https://example.com/image.jpg\",\r\n  \"release_year\": 2024,\r\n  \"price\": 150000,\r\n  \"total_page\": 300,\r\n  \"category_id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/books",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateBooks",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Timun Jelita\",\r\n  \"description\": \"Buku Timun Jelita.\",\r\n  \"image_url\": \"https://example.com/image.jpg\",\r\n  \"release_year\": 2024,\r\n  \"price\": 140000,\r\n  \"total_page\": 300,\r\n  \"category_id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/books/1",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"books",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteBooks",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/books/2",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"books",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "GetAllCategories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCategories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories/3",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBooksByCategories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories/4/books",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories",
+										"4",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCategories",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"comedy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCategories",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"romance\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories/4",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCategories",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://sb-go-quiz-3-cakrayudha-production.up.railway.app/api/categories/3",
+									"protocol": "https",
+									"host": [
+										"sb-go-quiz-3-cakrayudha-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJxdWl6MyIsImV4cCI6MTc0Njk4MDIzMn0.uH-2te88ThIYbigu5CF_2aYZphu45gU8RQOlJSWSUo8",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
